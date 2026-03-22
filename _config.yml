@@ -23,7 +23,7 @@ repository               : "yababaina/yababaina.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "favicon.png"
   name             : "Jeong Sujin"
   pronouns         : # example: "she/her"  
   bio              : "Junior developer working on Linux systems"
