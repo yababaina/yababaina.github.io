@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Junior developer working on Linux systems"
   location         : "Korea"
-  employer         : ""
+  # employer         : ""
   uri              : # URL
   email            : "juxtap.se@gmail.com" 
 
@@ -81,15 +81,6 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: # 'Books'
-  manuscripts:
-    title: # 'Journal Articles'    
-  conferences:
-    title: # 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -185,7 +176,6 @@ exclude:
   - gulpfile.js
   - LICENSE
   - local
-  - log
   - node_modules
   - package.json*
   - Rakefile
@@ -219,18 +209,18 @@ kramdown:
   enable_coderay: false
 
 
+# Post metadata — _posts/*.md 상단 YAML(프론트 매터)
+# - title        : 글 제목(필수 권장)
+# - date         : 게시 시각(예: 2025-03-22 12:00:00 +0900). 파일명 날짜(YYYY-MM-DD-*.md)와 맞추면 관리가 쉽습니다.
+# - categories   : 문자열 하나 또는 [배열, 여러 개]. /categories/ 페이지에 그룹으로 나타납니다.
+# - tags         : 문자열 하나 또는 [배열, 여러 개]. /tags/ 페이지에 그룹으로 나타납니다. (별도 _tags 컬렉션과 무관)
+# - excerpt      : 목록·RSS에 쓸 요약(생략 시 본문 앞부분이 발췌될 수 있음)
+# - layout       : 보통 생략 → 아래 defaults의 single 사용
+# - published    : false 로 두면 빌드에서 제외(드래프트 성격; future와 함께 동작 방식 확인)
+
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
+  projects:
     output: true
     permalink: /:collection/:path/
 
@@ -255,41 +245,15 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
+  # _projects
   - scope:
       path: ""
-      type: teaching
+      type: projects
     values:
       layout: single
       author_profile: true
       share: true
       comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS
