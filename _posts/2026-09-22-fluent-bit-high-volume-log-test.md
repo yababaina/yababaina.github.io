@@ -3,7 +3,7 @@ title: "Fluent Bit 로그 파이프라인 대용량 유입 테스트: 6.3K logs/
 date: 2026-09-22 14:00:00 +0900
 categories: [Logging]
 tags: [Fluent Bit, Cisco TRex, Prometheus, Grafana, C/C++, Performance Test]
-excerpt: "레거시 로깅 시스템을 Fluent Bit 기반 파이프라인으로 옮긴 뒤, Cisco TRex로 약 930Mb/s 트래픽을 흘려 장비 사양과 DPI, IDS/IPS 사용 여부별로 로그 처리량과 지연을 측정한 결과를 정리합니다."
+excerpt: "레거시 로깅 시스템을 Fluent Bit 기반 파이프라인으로 옮긴 뒤, Cisco TRex로 약 930Mb/s 트래픽을 발생시켜 장비 사양과 DPI, IDS/IPS 사용 여부별로 로그 처리량과 지연을 측정한 결과를 정리합니다."
 ---
 
 네트워크 보안 장비의 레거시 로깅 시스템을 **Fluent Bit 기반 로그 파이프라인**으로 옮겼습니다. 이 글에서는 옮긴 파이프라인이 대용량 트래픽 상황에서도 로그를 잃지 않고 처리하는지 검증한 테스트를 정리합니다.
@@ -36,7 +36,7 @@ excerpt: "레거시 로깅 시스템을 Fluent Bit 기반 파이프라인으로 
 
 ## 트래픽 조건
 
-[Cisco TRex](https://trex-tgn.cisco.com/)로 트래픽을 만들어 장비에 흘렸습니다.
+[Cisco TRex](https://trex-tgn.cisco.com/)로 테스트 트래픽을 발생시켰습니다.
 
 | 항목 | 값 |
 | --- | --- |
